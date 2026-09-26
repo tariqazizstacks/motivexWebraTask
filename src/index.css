@@ -1,0 +1,427 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #080808;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav {
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 50px;
+
+  border-bottom: 1px solid #222;
+}
+
+nav h2 {
+  letter-spacing: 5px;
+}
+
+nav div {
+  display: flex;
+  gap: 30px;
+  color: #aaa;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.hero p:first-child {
+  letter-spacing: 4px;
+  color: #888;
+}
+
+.hero h1 {
+  font-size: 55px;
+  letter-spacing: 4px;
+
+  margin: 20px 0;
+}
+
+.hero p:last-of-type {
+  color: #888;
+}
+
+
+/* =========================
+   EXPLORE BUTTON
+========================= */
+
+.explore-btn {
+  margin-top: 30px;
+
+  padding: 14px 30px;
+
+  background: white;
+  color: black;
+
+  text-decoration: none;
+
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  border-radius: 4px;
+}
+
+
+/* =========================
+   SHOWCASE LAYOUT
+========================= */
+
+.showcase-layout {
+  width: 100%;
+
+  height: calc(100vh - 80px);
+
+  display: grid;
+
+  grid-template-columns: 400px 1fr;
+
+  overflow: hidden;
+
+  /*
+    IMPORTANT:
+    ONE SINGLE BACKGROUND
+    FOR WHOLE SHOWCASE
+  */
+
+  background: radial-gradient(
+    circle at center,
+    #303338 0%,
+    #181a1d 45%,
+    #0d0e10 100%
+  );
+}
+
+
+/* =========================
+   SPECIFICATIONS SIDEBAR
+========================= */
+
+.specifications {
+  height: 100%;
+
+  padding: 22px 28px;
+
+  /*
+    NO BACKGROUND HERE
+
+    Parent ka background
+    automatically show hoga.
+  */
+
+  background: transparent;
+
+  color: white;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+
+/* =========================
+   SPECIFICATION LABEL
+========================= */
+
+.spec-label {
+  letter-spacing: 3px;
+
+  color: #aaa;
+
+  font-size: 10px;
+
+  margin-bottom: 7px;
+}
+
+
+/* =========================
+   SPECIFICATION TITLE
+========================= */
+
+.specifications h2 {
+  font-size: 22px;
+
+  line-height: 1.1;
+
+  margin-bottom: 17px;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================
+   SPECIFICATION GRID
+========================= */
+
+.spec-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 10px;
+
+  width: 80%;
+}
+
+
+/* =========================
+   SPECIFICATION CARD
+========================= */
+
+.spec-card {
+  height: 105px;
+
+  width: 135px;
+
+  display: flex;
+
+  margin-left: 20%;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  border: 1px solid #555;
+
+  border-radius: 10px;
+
+  /*
+    ONLY CARDS HAVE
+    THEIR OWN BACKGROUND
+  */
+
+  background: rgba(255, 255, 255, 0.06);
+
+  transition: 0.3s;
+}
+
+
+/* =========================
+   CARD HOVER
+========================= */
+
+.spec-card:hover {
+  transform: translateY(-3px);
+
+  background: rgba(255, 255, 255, 0.1);
+}
+
+
+/* =========================
+   CARD VALUE
+========================= */
+
+.spec-card h3 {
+  font-size: 25px;
+
+  margin-bottom: 4px;
+
+  color: white;
+}
+
+
+/* =========================
+   CARD LABEL
+========================= */
+
+.spec-card p {
+  color: #aaa;
+
+  letter-spacing: 1.5px;
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   CAR VIEWER
+========================= */
+
+.car-viewer {
+  width: 100%;
+
+  height: 100%;
+
+  /*
+    IMPORTANT:
+    NO BACKGROUND HERE.
+
+    It uses the same background
+    from .showcase-layout.
+  */
+
+  background: transparent;
+
+  position: relative;
+}
+
+
+/* =========================
+   COLOR CONTROLS
+========================= */
+
+.color-controls {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  position: absolute;
+
+  bottom: 25px;
+
+  left: 0;
+
+  right: 0;
+
+  z-index: 10;
+}
+
+
+/* =========================
+   COLOR BUTTONS
+========================= */
+
+.color-controls button {
+  padding: 11px 22px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  font-weight: 500;
+
+  transition: 0.25s;
+
+  color: white;
+}
+
+
+/* =========================
+   RED BUTTON
+========================= */
+
+.red-btn {
+  background: #b91c1c;
+}
+
+
+/* =========================
+   BLUE BUTTON
+========================= */
+
+.blue-btn {
+  background: #1d4ed8;
+}
+
+
+/* =========================
+   BLACK BUTTON
+========================= */
+
+.black-btn {
+  background: #171717;
+}
+
+
+/* =========================
+   WHITE BUTTON
+========================= */
+
+.white-btn {
+  background: #e5e5e5;
+
+  color: #111 !important;
+}
+
+
+/* =========================
+   GREEN BUTTON
+========================= */
+
+.green-btn {
+  background: #15803d;
+}
+
+
+/* =========================
+   COLOR BUTTON HOVER
+========================= */
+
+.color-controls button:hover {
+  transform: translateY(-3px);
+
+  filter: brightness(1.15);
+}
+
+
+/* =========================
+   LIGHTS BUTTON
+========================= */
+
+.lights-btn {
+  padding: 11px 22px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  background: #f59e0b;
+
+  color: #111;
+
+  transition: 0.25s;
+}
+
+
+/* =========================
+   LIGHTS BUTTON HOVER
+========================= */
+
+.lights-btn:hover {
+  transform: translateY(-3px);
+
+  filter: brightness(1.1);
+}
